@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from rest_framework.test import APIClient
 from rest_framework import status
 from .models import Student, University
-from utils.base import GenderTextChoies
+from accounts.utils.base import GenderTextChoies
 from django.core.exceptions import ValidationError
 import uuid
 from datetime import date
