@@ -22,7 +22,7 @@ class UniversitySerializer(serializers.ModelSerializer):
         fields = ['uid', 'name', 'address', 'ranking', 'established_year', 'students']
     
     def get_students(self, obj):
-        return StudentSerializer(obj.students.all(), many=True).data
+        return StudentSerializer(Student.objects.filter(university= obj), many=True).data
 
     def create(self, validated_data):
         return University.objects.create(**validated_data)
@@ -45,11 +45,10 @@ class StudentSerializer(serializers.ModelSerializer):
             'university': {'write_only': True}
         }
     
-    def get_university_details(self, obj):
+    def get_university_details(self, obj : Student):
         return {
             'uid': obj.university.uid,
             'name': obj.university.name,
-            'ranking': obj.university.get_ranking_display()
         }
 
     def create(self, validated_data):

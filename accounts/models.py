@@ -3,9 +3,10 @@ from accounts.utils.base import hex_code , GenderTextChoies
 
 class University(models.Model):
     uid = models.UUIDField(primary_key=True, default=hex_code, editable=False)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100 , unique=True)
+    ranking = models.IntegerField()
     address=  models.TextField()
-    established_on = models.IntegerField()
+    established_year = models.IntegerField()
     def __str__(self):
         return self.name
 

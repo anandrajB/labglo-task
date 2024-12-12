@@ -1,7 +1,7 @@
 from django.urls import path
 from accounts.api.student import (
     StudentListCreateApiView, 
-    StudentRetreiveUpdateDestroyApiView,
+    StudentRetrieveUpdateDestroyApiView,
     StudentAgeFilterRangeView
 )
 from accounts.api.university import (
@@ -17,7 +17,7 @@ urlpatterns = [
     path("login/", jwt_views.TokenObtainPairView.as_view(), name="token-obtrain-pair"),
     # Student URLs
     path('students/', StudentListCreateApiView.as_view(), name='student-list-create'),
-    path('students/<uuid:uid>/', StudentRetreiveUpdateDestroyApiView.as_view(), name='student-detail'),
+    path('students/<uuid:uid>/', StudentRetrieveUpdateDestroyApiView.as_view(), name='student-detail'),
     path('students/range/', StudentAgeFilterRangeView.as_view(), name='student-age-range-stats'),
     # University URLs
     path('universities/', UniversityListCreateApiView.as_view(), name='university-list-create'),
