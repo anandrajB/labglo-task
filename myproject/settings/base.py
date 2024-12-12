@@ -38,9 +38,7 @@ INSTALLED_APPS = [
 ]
 
 
-
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 ROOT_URLCONF = "myproject.urls.urls"
 
 
@@ -122,7 +120,6 @@ REST_FRAMEWORK = {
 }
 
 
-
 # -----------------------#
 #  INTERNATIONALIZATION   #
 # -----------------------#
@@ -139,9 +136,9 @@ USE_L10N = True
 USE_TZ = True
 
 
-# REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = (
-#         ("rest_framework.renderers.JSONRenderer"),
-#     )
+REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = (
+    ("rest_framework.renderers.JSONRenderer"),
+)
 
 
 # -------------------------#
@@ -165,7 +162,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 

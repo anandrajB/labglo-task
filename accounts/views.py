@@ -1,10 +1,14 @@
-
-
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
 from .serializers import UserRegistrationSerializer
+
+from django.http import JsonResponse
+
+
+def index(request):
+    return JsonResponse({"message": "Hello World"})
 
 
 class UserRegiratrationAPIView(APIView):

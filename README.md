@@ -21,8 +21,6 @@ Make sure you have the following installed on your machine:
 ## LINKS 
 
 - [API Docs](https://labglo-task.onrender.com/docs/redoc)
-- [ADMIN PANEL](https://labglo-task.onrender.com/admin/)
-- [POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/11858287/2sAYBUDs1U)
 
 
 #### Required packages
@@ -47,7 +45,7 @@ Make sure you have the following installed on your machine:
 - python manage.py migrate
 - python manage.py migrate --run-syncdb
 - python manage.py collectstatic
-- DJANGO_SETTINGS_MODDULE = project.settings 
+- DJANGO_SETTINGS_MODDULE = myproject.settings 
 - pytest 
 - python manage.py check --deploy
 - python manage.py runserver
